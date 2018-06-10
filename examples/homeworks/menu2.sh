@@ -12,39 +12,12 @@ echo ---- 			6\) Listar directorio actual ascendentemente 	     ----
 echo ----			7\) Salir					     ----
 echo ------------------------------------------------------------------------------------
 read -p "Escoja una de las opciones: " OPTION
-case $OPTION in
-	1)
-		echo "Opción 1"
-		option1
-		;;
-	2)
-		echo "Opción 2"
-		;;
-	3)
-		echo "Opción 3"
-		;;
-	4)
-		echo "Opción 4"
-		;;
-	5)
-		echo "Opción 5"
-		;;
-	6)
-		echo "Opción 6"
-		;;
-	7)
-		echo "Opción 7"
-		;;
-	*)
-		echo "Opción Invalida. Por favor vuelva a intentarlo"
-		;;
-esac
-option1()
-{
-	clear
-	echo CÓDIGO DEL ARCHIVO ACTUAL
-	echo.
-	cat ./menu.sh
-}
+if [ $OPTION -eq 1 ]; then
+	echo "Opción $OPTION"
+elif [ $OPTION -eq 2 ]; then;
+	echo "Opción $OPTION"
+elif [ $OPTION -eq 3 ]; then;
+	echo ""
 
-
+	echo No valido
+fi
