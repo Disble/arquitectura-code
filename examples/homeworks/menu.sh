@@ -5,8 +5,7 @@ option1()
 	echo ------------------------------------------------------------------------------------
 	echo CÓDIGO DEL ARCHIVO ACTUAL
 	echo ------------------------------------------------------------------------------------
-	echo.
-	cat ./menu.sh
+	more ./menu.sh
 }
 option2() {
 	clear
@@ -43,7 +42,7 @@ option5() {
 option6() {
 	clear
 	echo ------------------------------------------------------------------------------------
-	echo INFORMACIÓN SOBRE EL NÚCLE
+	echo INFORMACIÓN SOBRE EL NÚCLEO
 	echo ------------------------------------------------------------------------------------
 	uname -a
 }
@@ -54,17 +53,17 @@ option7() {
 menu()
 {
 	clear
-	echo ------------------------------------------------------------------------------------
-	echo ---------------------------------- 	MENU	---------------------------------
-	echo ------------------------------------------------------------------------------------
-	echo ----			1\) Código del archivo actual     	             ----
-	echo ----                       2\) Directorio Actual			  	     ----
-	echo ----			3\) Procesos del Sistema		  	     ----
-	echo ----			4\) Nombre del usuario actual		    	     ----
-	echo ----			5\) Crear archivo de texto plano 	     	     ----
-	echo ---- 			6\) Información sobre el núcleo 	     ----
-	echo ----			7\) Salir					     ----
-	echo ------------------------------------------------------------------------------------
+	echo "-----------------------------------------------------------------------------------"
+	echo "---------------------------------- 	MENU	---------------------------------"
+	echo "-----------------------------------------------------------------------------------"
+	echo "----			1\) Código del archivo actual     	             ----"
+	echo "----                      2\) Directorio Actual			  	     ----"
+	echo "----			3\) Procesos del Sistema		  	     ----"
+	echo "----			4\) Nombre del usuario actual		    	     ----"
+	echo "----			5\) Crear archivo de texto plano 	     	     ----"
+	echo "---- 			6\) Información sobre el núcleo 		     ----"
+	echo "----			7\) Salir					     ----"
+	echo "-----------------------------------------------------------------------------------"
 	read -p "Escoja una de las opciones: " OPTION
 	case $OPTION in
 		1)
@@ -82,7 +81,6 @@ menu()
 		3)
 			echo "Opción 3"
 			option3
-			read -p "Presione cualquier tecla para continuar..." PAUSE
 			menu
 			;;
 		4)
