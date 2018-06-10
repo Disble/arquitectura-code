@@ -1,4 +1,12 @@
 #!/bin/sh
+option1()
+{
+	clear
+	echo CÓDIGO DEL ARCHIVO ACTUAL
+	echo.
+	cat ./menu.sh
+}
+
 clear
 echo ------------------------------------------------------------------------------------
 echo ---------------------------------- 	MENU	---------------------------------
@@ -39,12 +47,4 @@ case $OPTION in
 		echo "Opción Invalida. Por favor vuelva a intentarlo"
 		;;
 esac
-option1()
-{
-	clear
-	echo CÓDIGO DEL ARCHIVO ACTUAL
-	echo.
-	cat ./menu.sh
-}
-
 
