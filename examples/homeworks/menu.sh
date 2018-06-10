@@ -7,6 +7,7 @@ option1()
 	echo ------------------------------------------------------------------------------------
 	echo.
 	cat ./menu.sh
+	read -p "Press enter to continue" PAUSE
 }
 option2() {
 	clear
@@ -64,52 +65,52 @@ menu()
 	echo ---- 			6\) Información sobre el núcleo 	     ----
 	echo ----			7\) Salir					     ----
 	echo ------------------------------------------------------------------------------------
-}
-menu
 read -p "Escoja una de las opciones: " OPTION
 case $OPTION in
 	1)
 		echo "Opción 1"
 		option1
-		read -p "Press enter to continue"
 		menu
 		;;
 	2)
 		echo "Opción 2"
 		option2
-		read -p "Press enter to continue"
+		read -p "Press enter to continue" PAUSE
 		menu
 		;;
 	3)
 		echo "Opción 3"
 		option3
-		read -p "Press enter to continue"
+		read -p "Press enter to continue" PAUSE
 		menu
 		;;
 	4)
 		echo "Opción 4"
 		option4
-		read -p "Press enter to continue"
+		read -p "Press enter to continue" PAUSE
 		menu
 		;;
 	5)
 		echo "Opción 5"
 		option5
-		read -p "Press enter to continue"
+		read -p "Press enter to continue" PAUSE
 		menu
 		;;
 	6)
 		echo "Opción 6"
 		option6
-		read -p "Press enter to continue"
+		read -p "Press enter to continue" PAUSE
 		menu
 		;;
 	7)
 		echo "Opción 7"
+		option6
+		read -p "Press enter to continue" PAUSE
 		option7
 		;;
 	*)
 		echo "Opción Invalida. Por favor vuelva a intentarlo"
 		;;
 esac
-
+}
+menu
