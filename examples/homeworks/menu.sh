@@ -25,14 +25,14 @@ option3() {
 option4() {
 	clear
 	echo ------------------------------------------------------------------------------------
-	echo ABRIR .bash_profile DEL USUARIO ACTUAL (con vim)
+	echo "ABRIR .bash_profile DEL USUARIO ACTUAL (con vim)"
 	echo ------------------------------------------------------------------------------------
 	vim ~/.bash_profile
 }
 option5() {
 	clear
 	echo ------------------------------------------------------------------------------------
-	echo ABRIR /etc/passwd (con vim)
+	echo "ABRIR /etc/passwd (con vim)"
 	echo ------------------------------------------------------------------------------------
 	vim /etc/passwd
 }
@@ -48,7 +48,7 @@ option7() {
 	echo ------------------------------------------------------------------------------------
 	echo INFORMACIÓN SOBRE EL USUARIO ACTUAL
 	echo ------------------------------------------------------------------------------------
-	NAME=$(whoiam)
+	NAME=$(whoami)
 	finger $NAME
 }
 option8() {
@@ -112,13 +112,11 @@ menu()
 		4)
 			echo "Opción 4"
 			option4
-			read -p "Presione cualquier tecla para continuar..." PAUSE
 			menu
 			;;
 		5)
 			echo "Opción 5"
 			option5
-			read -p "Presione cualquier tecla para continuar..." PAUSE
 			menu
 			;;
 		6)
