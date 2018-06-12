@@ -56,7 +56,7 @@ option8() {
 	echo ------------------------------------------------------------------------------------
 	echo CREAR ARCHIVO DE TEXTO PLANO
 	echo ------------------------------------------------------------------------------------
-	read -p "Escriba el texto que quiere guardar (el archivo se llamara myfile.txt): \" TEXTO
+	read -p "Escriba el texto que quiere guardar (el archivo se llamara myfile.txt): " TEXTO
 	echo $TEXTO > myfile.txt
 	echo Archivo creado
 	ls -l | grep myfile
