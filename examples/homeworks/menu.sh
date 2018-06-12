@@ -25,29 +25,51 @@ option3() {
 option4() {
 	clear
 	echo ------------------------------------------------------------------------------------
-	echo NOMBRE DEL USUARIO ACTUAL
+	echo ABRIR .bash_profile DEL USUARIO ACTUAL (con vim)
 	echo ------------------------------------------------------------------------------------
-	whoami
+	vim ~/.bash_profile
 }
 option5() {
 	clear
 	echo ------------------------------------------------------------------------------------
-	echo CREAR UN ARCHIVO DE TEXTO PLANO
+	echo ABRIR /etc/passwd (con vim)
 	echo ------------------------------------------------------------------------------------
-	read -p "Escriba lo que quierda guardar: " TEXTO
+	vim /etc/passwd
+}
+option6() {
+	clear
+	echo ------------------------------------------------------------------------------------
+	echo NOMBRE DEL USUARIO ACTUAL
+	echo ------------------------------------------------------------------------------------
+	whoami
+}
+option7() {
+	clear
+	echo ------------------------------------------------------------------------------------
+	echo INFORMACIÓN SOBRE EL USUARIO ACTUAL
+	echo ------------------------------------------------------------------------------------
+	NAME=$(whoiam)
+	finger $NAME
+}
+option8() {
+	clear
+	echo ------------------------------------------------------------------------------------
+	echo CREAR ARCHIVO DE TEXTO PLANO
+	echo ------------------------------------------------------------------------------------
+	read -p "Escriba el texto que quiere guardar (el archivo se llamara myfile.txt): \" TEXTO
 	echo $TEXTO > myfile.txt
 	echo Archivo creado
 	ls -l | grep myfile
 	cat myfile.txt
 }
-option6() {
+option9() {
 	clear
 	echo ------------------------------------------------------------------------------------
 	echo INFORMACIÓN SOBRE EL NÚCLEO
 	echo ------------------------------------------------------------------------------------
 	uname -a
 }
-option7() {
+option0() {
 	break
 }
 
@@ -106,11 +128,29 @@ menu()
 			menu
 			;;
 		7)
-			echo "Cerrando menu..."
+			echo "Opción 7"
 			option7
+			read -p "Presione cualquier tecla para continuar..." PAUSE
+			menu
+			;;
+		8)
+			echo "Opción 8"
+			option8
+			read -p "Presione cualquier tecla para continuar..." PAUSE
+			menu
+			;;
+		9)
+			echo "Opción 9"
+			option9
+			read -p "Presione cualquier tecla para continuar..." PAUSE
+			menu
+			;;
+		0)
+			echo "Cerrando menu..."
+			option0
 			;;
 		*)
-			echo "Opción Invalida. Por favor vuelva a intentarlo"
+			read -p "Opción Invalida. Por favor vuelva a intentarlo..." PAUSE
 			menu
 			;;
 	esac
