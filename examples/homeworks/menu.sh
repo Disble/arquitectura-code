@@ -10,9 +10,10 @@ option1()
 option2() {
 	clear
 	echo ------------------------------------------------------------------------------------
-	echo DIRECTORIO ACTUAL
+	echo LISTAR DIRECTORIO ACTUAL
 	echo ------------------------------------------------------------------------------------
 	pwd
+	ls -la
 }
 option3() {
 	clear
@@ -54,15 +55,18 @@ menu()
 {
 	clear
 	echo "-----------------------------------------------------------------------------------"
-	echo "---------------------------------- 	MENU	---------------------------------"
+	echo "MENU"
 	echo "-----------------------------------------------------------------------------------"
-	echo "----			1\) Código del archivo actual     	             ----"
-	echo "----                      2\) Directorio Actual			  	     ----"
-	echo "----			3\) Procesos del Sistema		  	     ----"
-	echo "----			4\) Nombre del usuario actual		    	     ----"
-	echo "----			5\) Crear archivo de texto plano 	     	     ----"
-	echo "---- 			6\) Información sobre el núcleo 		     ----"
-	echo "----			7\) Salir					     ----"
+	echo "1) Código del archivo actual"
+	echo "2) Listar Directorio Actual"
+	echo "3) Procesos del Sistema"
+	echo "4) Abrir .bash_profile del usuario actual (con vim)"
+	echo "5) Abrir /etc/passwd (con vim)"
+	echo "6) Nombre del usuario actual"
+	echo "7) Información sobre el usuario actual"
+	echo "8) Crear archivo de texto plano"
+	echo "9) Información sobre el núcleo"
+	echo "0) Salir"
 	echo "-----------------------------------------------------------------------------------"
 	read -p "Escoja una de las opciones: " OPTION
 	case $OPTION in
