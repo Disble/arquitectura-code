@@ -32,7 +32,3 @@ OPERABIN   ;ejecutable del programa que se puede correr directamente
 
 > Punto y coma es a su vez fin de instrucción e inicio de comentarios. Por esta razón los comentarios van pegados al punto y coma unido al texto.
 
-### Repositorios
-
-Repositorio original en [Gitlab](https://gitlab.com/Disble/arquitectura-code.git) tambien disponible en [Github](https://github.com/Disble/arquitectura-code.git).
-
